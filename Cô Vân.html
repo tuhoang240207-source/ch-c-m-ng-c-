@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng 20/10 - Cô Lò Thị Thanh Vân 🌸</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Hiệu ứng hoa rơi */
+        .petal {
+            position: absolute;
+            background-color: #ffffff;
+            border-radius: 150% 0 150% 0;
+            animation: animatePetal 10s linear infinite;
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        @keyframes animatePetal {
+            0% {
+                top: -10%;
+                transform: translateX(0) rotate(0deg);
+            }
+            100% {
+                top: 110%;
+                transform: translateX(100px) rotate(360deg);
+            }
+        }
+
+        /* Khung chứa chính */
+        .card-container {
+            background: rgba(255, 255, 255, 0.93);
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(106, 27, 154, 0.15);
+            text-align: center;
+            max-width: 580px;
+            width: 100%;
+            z-index: 10;
+            backdrop-filter: blur(8px);
+            border: 2px solid #ffffff;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .icon-top {
+            font-size: 55px;
+            margin-bottom: 10px;
+            display: inline-block;
+            animation: beat 1.2s infinite alternate;
+        }
+
+        @keyframes beat {
+            to { transform: scale(1.15); }
+        }
+
+        h1 {
+            color: #6a1b9a;
+            font-size: 23px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-weight: 600;
+            color: #1565c0;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .btn-open {
+            background: linear-gradient(45deg, #8e24aa, #1e88e5);
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(142, 36, 170, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .btn-open:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(142, 36, 170, 0.5);
+        }
+
+        /* Khung nội dung thư */
+        .letter-content {
+            display: none;
+            margin-top: 25px;
+            text-align: left;
+            line-height: 1.8;
+            color: #37474f;
+            background: #f3e5f5;
+            padding: 22px;
+            border-radius: 16px;
+            border-left: 5px solid #8e24aa;
+            animation: slideDown 0.8s ease-out forwards;
+        }
+
+        .typing-text {
+            font-size: 15px;
+            white-space: pre-wrap;
+        }
+
+        .footer-text {
+            text-align: right;
+            font-weight: bold;
+            color: #6a1b9a;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nhạc nền nhẹ nhàng -->
+    <audio id="bg-music" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-beautiful-dream-493.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="card-container">
+        <div class="icon-top">🎓💐</div>
+        <h1>HAPPY VIETNAMESE WOMEN'S DAY</h1>
+        <div class="subtitle">Kính gửi Cô Lò Thị Thanh Vân 🌸</div>
+
+        <button class="btn-open" id="btn-toggle" onclick="toggleLetter()">Gửi Trao Lời Chúc ✉️</button>
+
+        <div class="letter-content" id="letter">
+            <div class="typing-text" id="typewriter"></div>
+            <div class="footer-text">— Kính chúc Cô 20/10 thật rực rỡ! ✨ —</div>
+        </div>
+    </div>
+
+    <script>
+        const message = "Kính gửi Cô Lò Thị Thanh Vân,\n\nNhân ngày Phụ nữ Việt Nam 20/10, chúng con xin gửi tới Cô những lời chúc tốt đẹp và tình cảm trân trọng nhất!\n\nCảm ơn Cô vì những bài giảng môn Kinh tế hành vi vô cùng hấp dẫn và thực tế. Nhờ có Cô, những khái niệm tâm lý - kinh tế phức tạp đã trở nên gần gũi, thú vị hơn bao giờ hết.\n\nChúc Cô luôn dồi dào sức khỏe, tràn đầy năng lượng tích cực, luôn gặp nhiều may mắn và thành công trong sự nghiệp trồng người. Chúc Cô mỗi ngày lên lớp đều là một ngày vui và có thật nhiều 'cú hích' (nudge) hạnh phúc trong cuộc sống! 🌸✨";
+
+        let isOpened = false;
+        let charIndex = 0;
+
+        function typeEffect() {
+            if (charIndex < message.length) {
+                document.getElementById("typewriter").textContent += message.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeEffect, 35);
+            }
+        }
+
+        function toggleLetter() {
+            var letter = document.getElementById("letter");
+            var music = document.getElementById("bg-music");
+            var btn = document.getElementById("btn-toggle");
+
+            if (letter.style.display === "none" || letter.style.display === "") {
+                letter.style.display = "block";
+                btn.textContent = "Thu Gọn Thư 💌";
+                
+                if (!isOpened) {
+                    typeEffect();
+                    isOpened = true;
+                }
+                
+                if (music) {
+                    music.play().catch(function(error) {
+                        console.log("Autoplay blocked:", error);
+                    });
+                }
+            } else {
+                letter.style.display = "none";
+                btn.textContent = "Gửi Trao Lời Chúc ✉️";
+            }
+        }
+
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.classList.add('petal');
+            
+            const size = Math.random() * 12 + 8 + 'px';
+            petal.style.width = size;
+            petal.style.height = size;
+            
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.animationDuration = Math.random() * 5 + 5 + 's';
+            
+            document.body.appendChild(petal);
+            
+            setTimeout(() => {
+                petal.remove();
+            }, 10000);
+        }
+
+        setInterval(createPetal, 350);
+    </script>
+</body>
+</html>
